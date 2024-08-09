@@ -3,8 +3,8 @@ import os
 from tensorflow.keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
 
 
-input_image_path = 'custom_data/0/0.png'
-output_dir = 'custom_data/0'
+input_image_path = 'custom_data/1/1.png'
+output_dir = 'custom_data/1'
 os.makedirs(output_dir, exist_ok=True)
 
 
@@ -25,7 +25,7 @@ datagen = ImageDataGenerator(
     cval=0,                         # 채우기 값
     horizontal_flip=False,           # 좌우 반전
     vertical_flip=False,            # 상하 반전
-    rescale=1./255,                 # 스케일링(정규화 0~1 값)
+    #rescale=1./255,                 # 스케일링(정규화 0~1 값) ==> 학습할 때 적용할 것.
     preprocessing_function=lambda x: x + np.random.normal(0, 0.05, x.shape)  # 노이즈
 )
 
