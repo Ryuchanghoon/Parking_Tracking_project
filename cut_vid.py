@@ -21,10 +21,9 @@ while cap.isOpened():
         print("프레임 획득 X")
         break
 
-    # 프레임을 화면에 표시
     cv2.imshow('Video', frame)
 
-    # 키보드 입력 대기
+    
     key = cv2.waitKey(1) & 0xFF
     
     # q 키 누름 저장
